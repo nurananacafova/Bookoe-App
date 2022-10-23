@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Bookeo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <header class="bg-white flex justify-between width-96 py-5 px-16 items-center">
+    <section>
+      <a href="./index.html">
+        <img src="./assets/img/logo.png" alt="logo" class="w-40" />
+      </a>
+    </section>
+
+    <form class="user-form w-6/12">
+      <div class="flex ">
+        <label for="search-dropdown"
+          class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">menu</label>
+        <button id="dropdown-button" data-dropdown-toggle="dropdownBottom"
+          class="transition-all purple relative menu-dropdown flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center border border-gray-600 rounded-l-lg hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 "
+          type="button">
+          <img class="menus-logo w-4 mr-1" src="./assets/img/menus_logo.png" alt="menus logo" />
+          Menus
+          <svg aria-hidden="true" class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+
+        <div id="dropdown"
+          class="absolute top-16 menu-dropdown-content hidden z-10 w-44 bg-white border-gray-600 rounded divide-y shadow ">
+          <ul class="py-1 text-sm purple " aria-labelledby="dropdown-button">
+            <li>
+              <a href="#" class="block py-2 px-4 hover:bg-gray-300">Shopping</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-4 hover:bg-gray-300">Images</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-4 hover:bg-gray-300">News</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-4 hover:bg-gray-300">Finance</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="relative w-full">
+          <input type="search" id="search-dropdown"
+            class=" block p-2.5 w-full z-20 text-sm text-gray-900 rounded-r-lg border-l-2 border border-gray-600 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400  "
+            placeholder="Search" required>
+          <button type="submit"
+            class="transition-all absolute top-0 right-0 p-2.5 text-sm font-medium purple hover:bg-gray-300  rounded-r-lg border border-gray-600"><svg
+              aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg></button>
+        </div>
+      </div>
+    </form>
+
+    <div class="h-full flex">
+      <button type="button"
+        class="transition-all h-full bg-gray-300 rounded-lg py-2 px-4 purple font-bold mr-2 hover:bg-gray-200">Log
+        In</button>
+      <button type="button"
+        class="h-full flex transition-all text-white bg-indigo-600 rounded-lg py-2 px-4 purple font-bold hover:bg-indigo-500">
+        <img src="./assets/img/signup_logo.png" alt="sign up logo" />
+        Sign Up
+      </button>
+    </div>
+  </header>
+
+  <main class="w-full py-5 px-16">
+    <section class="flex">
+      <div class="main-gallery w-3/4 rounded-2xl">
+        <div class="main-gallery-cell rounded-2xl py-16 px-16">
+          <p class="purple font-bold mb-4">BACK TO SCHOOL</p>
+          <h1 class="text-5xl font-bold mb-7">Special 50% Off</h1>
+          <p class="text-3xl mb-7">for our student community</p>
+          <p class="mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+          <div class="my-10 flex items-center">
+            <a class="mr-4 transition-all hover:bg-indigo-500 flex w-44 justify-between back-purple text-white rounded-3xl py-4 px-5"
+              href="#">
+              Get the deal
+              <img src="./assets/img/right-arrow.png" alt="arrow-right" />
+            </a>
+            <a class="border border-gray-600 transition-all hover:bg-gray-300 p-4 rounded-3xl" href="#">See other
+              promos</a>
+          </div>
+        </div>
+        <div class="main-gallery-cell rounded-2xl py-16 px-16">
+          <p class="purple font-bold mb-4">BACK TO SCHOOL</p>
+          <h1 class="text-5xl font-bold mb-7">Special 70% Off</h1>
+          <p class="text-3xl mb-7">for our student community</p>
+          <p class="mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+          <div class="my-10 flex items-center">
+            <a class="mr-4 transition-all hover:bg-indigo-500 flex w-44 justify-between back-purple text-white rounded-3xl py-4 px-5"
+              href="#">
+              Get the deal
+              <img src="./assets/img/right-arrow.png" alt="arrow-right" />
+            </a>
+            <a class="border border-gray-600 transition-all hover:bg-gray-300 p-4 rounded-3xl" href="#">See other
+              promos</a>
+          </div>
+        </div>
+        <div class="main-gallery-cell rounded-2xl py-16 px-16">
+          <p class="purple font-bold mb-4">BACK TO SCHOOL</p>
+          <h1 class="text-5xl font-bold mb-7">Special 80% Off</h1>
+          <p class="text-3xl mb-7">for our student community</p>
+          <p class="mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+          <div class="my-10 flex items-center">
+            <a class="mr-4 transition-all hover:bg-indigo-500 flex w-44 justify-between back-purple text-white rounded-3xl py-4 px-5"
+              href="#">
+              Get the deal
+              <img src="./assets/img/right-arrow.png" alt="arrow-right" />
+            </a>
+            <a class="border border-gray-600 transition-all hover:bg-gray-300 p-4 rounded-3xl" href="#">See other
+              promos</a>
+          </div>
+        </div>
+        <div class="main-gallery-cell rounded-2xl py-16 px-16">
+          <p class="purple font-bold mb-4">BACK TO SCHOOL</p>
+          <h1 class="text-5xl font-bold mb-7">Special 90% Off</h1>
+          <p class="text-3xl mb-7">for our student community</p>
+          <p class="mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+          <div class="my-10 flex items-center">
+            <a class="mr-4 transition-all hover:bg-indigo-500 flex w-44 justify-between back-purple text-white rounded-3xl py-4 px-5"
+              href="#">
+              Get the deal
+              <img src="./assets/img/right-arrow.png" alt="arrow-right" />
+            </a>
+            <a class="border border-gray-600 transition-all hover:bg-gray-300 p-4 rounded-3xl" href="#">See other
+              promos</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="w-1/4 a">
+        <!-- Slider main container -->
+        <div class="swiper best-seller bg-gray-400 mx-4 rounded-2xl h-full ">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h3 class="text-white font-bold text-3xl text-center mt-12 mb-6">BEST SELLER</h3>
+              <p class="text-white text-center">Based sales this week</p>
+              <div class="">
+                <img class="" src="./assets/img/books/1001656678502.png" alt="book-img" />
+              </div>
+              <p class="text-white font-bold text-center mb-4">Pushing Clouds</p>
+              <p class="text-gray-300 text-sm text-center mb-3">ADVANTURE, SCIENCE, COMEDY</p>
+              <div class="font-bold bg-white w-44 rounded-xl mx-auto flex justify-center py-2">
+                <p class="text-gray-300 mr-4 line-through">60.00</p>
+                <p>USD 45.25</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <h3 class="text-white font-bold text-3xl text-center mt-12 mb-6">BEST SELLER</h3>
+              <p class="text-white text-center">Based sales this week</p>
+              <div class="">
+                <img class="" src="./assets/img/books/1001651662833.png" alt="book-img" />
+              </div>
+              <p class="text-white font-bold text-center mb-4">basqa kitab</p>
+              <p class="text-gray-300 text-sm text-center mb-3">ADVANTURE, SCIENCE, COMEDY</p>
+              <div class="font-bold bg-white w-44 rounded-xl mx-auto flex justify-center py-2">
+                <p class="text-gray-300 mr-4 line-through">60.00</p>
+                <p>USD 45.25</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <h3 class="text-white font-bold text-3xl text-center mt-12 mb-6">BEST SELLER</h3>
+              <p class="text-white text-center">Based sales this week</p>
+              <div class="">
+                <img class="" src="./assets/img/books/1001656317756.png" alt="book-img" />
+              </div>
+              <p class="text-white font-bold text-center mb-4">daha basqa kitab</p>
+              <p class="text-gray-300 text-sm text-center mb-3">ADVANTURE, SCIENCE, COMEDY</p>
+              <div class="font-bold bg-white w-44 rounded-xl mx-auto flex justify-center py-2">
+                <p class="text-gray-300 mr-4 line-through">60.00</p>
+                <p>USD 45.25</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <h3 class="text-white font-bold text-3xl text-center mt-12 mb-6">BEST SELLER</h3>
+              <p class="text-white text-center">Based sales this week</p>
+              <div class="">
+                <img class="" src="./assets/img/books/9780135462409.png" alt="book-img" />
+              </div>
+              <p class="text-white font-bold text-center mb-4">windows internal</p>
+              <p class="text-gray-300 text-sm text-center mb-3">ADVANTURE, SCIENCE, COMEDY</p>
+              <div class="font-bold bg-white w-44 rounded-xl mx-auto flex justify-center py-2">
+                <p class="text-gray-300 mr-4 line-through">60.00</p>
+                <p>USD 45.25</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <h3 class="text-white font-bold text-3xl text-center mt-12 mb-6">BEST SELLER</h3>
+              <p class="text-white text-center">Based sales this week</p>
+              <div class="">
+                <img class="" src="./assets/img/books/9780136819387.png" alt="book-img" />
+              </div>
+              <p class="text-white font-bold text-center mb-4">zor kitab</p>
+              <p class="text-gray-300 text-sm text-center mb-3">ADVANTURE, SCIENCE, COMEDY</p>
+              <div class="font-bold bg-white w-44 rounded-xl mx-auto flex justify-center py-2">
+                <p class="text-gray-300 mr-4 line-through">60.00</p>
+                <p>USD 45.25</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-button-next text-white bg-gray-200 rounded-md"></div>
+          <div class="swiper-button-prev text-white bg-gray-200 rounded-md"></div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+
+  <section class="py-5 px-16 flex">
+    <div class="flex ">
+      <div class="w-40 mr-2">
+        <img class="w-full" src="./assets/img/lightning.png" alt="" />
+      </div>
+      <div>
+        <h5 class="font-bold">Quick Delivery</h5>
+        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+      </div>
+    </div>
+    <div class="flex ">
+      <div class="w-40 mr-2">
+        <img class="w-full" src="./assets/img/secure.png" alt="" />
+      </div>
+      <div>
+        <h5 class="font-bold">Secure Payment</h5>
+        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+      </div>
+    </div>
+    <div class="flex ">
+      <div class="w-40 mr-2">
+        <img class="w-full" src="./assets/img/like.png" alt="" />
+      </div>
+      <div>
+        <h5 class="font-bold">Best Quality</h5>
+        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+      </div>
+    </div>
+    <div class="flex ">
+      <div class="w-40 mr-2">
+        <img class="w-full" src="./assets/img/star.png" alt="" />
+      </div>
+      <div>
+        <h5 class="font-bold">Return Guarantee</h5>
+        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 px-16 flex h-96  ">
+    <div class="recomended w-1/2 h-full p-6 rounded-md mr-2">
+      <h3 class="font-bold text-xl mb-2">Recomended For You</h3>
+      <p class="text-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua.</p>
+      <div class="swiper recomended-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/1001651662833.png"
+              alt="" />
+          </div>
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/1001656317756.png"
+              alt="" />
+          </div>
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/1001656678502.png"
+              alt="" />
+          </div>
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/9780135462409.png"
+              alt="" />
+          </div>
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/9780136789239.png"
+              alt="" />
+          </div>
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/9780136819387.png"
+              alt="" />
+          </div>
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/9780137380350.png"
+              alt="" />
+          </div>
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/9780137564279.png"
+              alt="" />
+          </div>
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/9780137613663.png"
+              alt="" />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+
+    <div class="popular w-1/2 h-full p-6 rounded-md">
+      <h3 class="font-bold text-xl mb-2">Popular in 2020</h3>
+      <p class="text-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua.</p>
+      <div class="swiper popular-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/1001651662833.png"
+              alt="" />
+          </div>
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/1001656317756.png"
+              alt="" />
+          </div>
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/1001656678502.png"
+              alt="" />
+          </div>
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/9780135462409.png"
+              alt="" />
+          </div>
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/9780136789239.png"
+              alt="" />
+          </div>
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/9780136819387.png"
+              alt="" />
+          </div>
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/9780137380350.png"
+              alt="" />
+          </div>
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/9780137564279.png"
+              alt="" />
+          </div>
+          <div class="swiper-slide w-2/3 h-2/3">
+            <img class="w-full h-full" src="./assets/img/books/9780137613663.png"
+              alt="" />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="aaaaaaaaaaa">
+    <div class="details">
+      <img class="detail-img" src="./assets/img/group.svg" alt="Customers...">
+      <p class="count">125,663</p>
+      <p class="detail-title">Happy Customers</p>
+    </div>
+    <div class="details">
+      <img class="detail-img" src="./assets/img/open-book.svg" alt="Books...">
+      <p class="count">50,672+</p>
+      <p class="detail-title">Book Collections</p>
+    </div>
+    <div class="details">
+      <img class="detail-img" src="./assets/img/store.svg" alt="Our Stores...">
+      <p class="count">1,562</p>
+      <p class="detail-title">Our Stores</p>
+    </div>
+    <div class="details">
+      <img class="detail-img" src="./assets/img/quill.svg" alt="Quill...">
+      <p class="count">457</p>
+      <p class="detail-title">Famous Writers</p>
+    </div>
+  </section>
+
+
+  <section class="subscribe">
+    <p class="subscribe-title">Subscribe our newsletter for newest books updates</p>
+    <form action="" class="subscribe-form">
+      <input class="email-box" type="text" placeholder="Type your email here" name="" id="email-box">
+      <label for="email-box" class="email-icon">Subscribe</label>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner first">
+      <img src="./assets/img/logo.png" alt="Store logo" class="logo">
+      <p class="store-title">Bookoe is a Book Store Website lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+      <p class="follow-us">Follow us</p>
+      <div class="social-media">
+        <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+        <a href="https://www.youtube.com" class="fa fa-youtube"></a>
+        <a href="https://www.twitter.com" class="fa fa-twitter"></a>
+        <a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com" class="fa fa-instagram"></a>
+      </div>
+    </div>
+
+    <div class="footer-inner second">
+      <p class="footer-title">Books categories</p>
+      <div class="second-inner">
+        <div class="inner">
+          <a class="categories" href="#">Action</a>
+          <a class="categories" href="#">Adventure</a>
+          <a class="categories" href="#">Comedy</a>
+          <a class="categories" href="#">Crime</a>
+          <a class="categories" href="#">Drama</a>
+          <a class="categories" href="#">Fantasy</a>
+          <a class="categories" href="#">Horror</a>
+        </div>
+        <div class="inner">
+          <a class="categories" href="#">Law</a>
+          <a class="categories" href="#">Mystery</a>
+          <a class="categories" href="#">Professional</a>
+          <a class="categories" href="#">Romance</a>
+          <a class="categories" href="#">TV Series</a>
+          <a class="categories view-more" href="#">View more></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-inner third">
+      <p class="footer-title">Quick Links</p>
+      <a class="categories" href="#">Action</a>
+      <a class="categories" href="#">About us</a>
+      <a class="categories" href="#">Contact us</a>
+      <a class="categories" href="#">Products</a>
+      <a class="categories" href="#">Login</a>
+      <a class="categories" href="#">Sign up</a>
+      <a class="categories" href="#">FAQ</a>
+      <a class="categories" href="#">Shipment</a>
+    </div>
+    <div class="footer-inner forth">
+      <p class="footer-title">Our Store</p>
+      <div class="mapouter">
+        <div class="gmap_canvas"><iframe width="376" height="120" id="gmap_canvas"
+            src="https://maps.google.com/maps?q=832%20Thompson%20Drive,%20San%20Fransisco%20CA%2094107,%20United%20States&t=&z=5&ie=UTF8&iwloc=&output=embed"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+            href="https://fmovies-online.net"></a><br>
+          <style>
+            .mapouter {
+              position: relative;
+              text-align: right;
+              height: 120px;
+              width: 376px;
+            }
+          </style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+          <style>
+            .gmap_canvas {
+              overflow: hidden;
+              background: none !important;
+              height: 120px;
+              width: 376px;
+            }
+          </style>
+        </div>
+      </div>
+      <div class="contact">
+        <a class="contact--type" href="#"><img class="icon" src="./assets/img/map-marker.png" alt="">832 Thompson Drive,
+          San Fransisco CA 94107, United States</a><br />
+        <a class="contact--type" href="tel:+1-543-123-4567"><img class="icon" src="./assets/img/phone.png" alt="">+123
+          345123 556</a><br />
+        <a class="contact--type" href="mailto:example@fylo.com"><img class="icon" src="./assets/img/mail.png"
+            alt="">support@bookoe.id</a>
+      </div>
+  </footer>
+</div>
+<div class="fifth">
+<p class="start">Bookoe Book Store Website  -   © 2022 All Rights Reserved</p>
+<p class="end">Made with ♥ by Peterdraw</p>
+</div>
+
+
+  <!-- <div class="swiper swiper3">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  </div> -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="./assets/js/swiper.js"></script>
+  <script src="./assets/js/dropdown.js"></script>
+</body>
+
+</html>

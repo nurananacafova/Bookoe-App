@@ -1,0 +1,17 @@
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #6C5DD3;
+    --grey: #E1E1E1;
+    --white: #FFFFFF;
+}
+
+body {
+    background-color: var(--white) !important;
+}
